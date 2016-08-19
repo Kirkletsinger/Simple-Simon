@@ -1,0 +1,39 @@
+.squares {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    background: ;
+    flex-flow: row wrap;
+}
+
+
+.square1 {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    background: #D50813;
+    opacity: .25;
+
+}
+.square2 {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    background: #24F041;
+    opacity: .25;
+
+}
+.square3 {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    background: #36B5FF;
+    opacity: .25;
+}
+.square4 {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    background: #EBDA00;
+    opacity: .25;
+}
