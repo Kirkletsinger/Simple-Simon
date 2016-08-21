@@ -29,3 +29,42 @@ function userTurn() {
 		instructions[0].innerHTML = "Your turn!";
 	}, 800);
 }
+//highlights color
+function press(event){
+	this.style.opacity = "1";
+}
+
+//un highlight color
+function release(event){
+	this.style.opacity = "0.5";
+}
+
+//adds user selections to user array
+function userChoices(event){
+	var selected = this.attributes['data-value'].value;
+	userSequence.push(selected);
+	//console.log(userSequence);
+	compare();
+}
+
+///Preview
+//gets rid od event listeners so player cant click during preview
+function preView() {
+	for (i = 0; i < boxes.length; i++){
+		boxes[i].removeEventListener('mousedown', press, false);
+		boxes[i].removeEventListener('mouseup', release, false );
+		boxes[i].removeEventListener('click', userChoices, false);
+	}
+}
+//At the beginning of each round randomly selects a square and is added to the challange array
+//and repeats
+function challengeGenerator() {
+			document.getElementById('round').innerHTML = "Round: " + x;
+			var a = Math.floor(Math.random() * 4);
+			challengeSequence.push(a);
+			challengeAnimator(challengeSequence);
+				// console.log(challengeSequence);
+}
+
+
+
